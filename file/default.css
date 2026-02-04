@@ -1,86 +1,114 @@
+:root {
+  --design-width: 1100;
+  --design-height: 680;
+}
+
 body {
   margin: 0;
   padding: 0;
   background-image: url('../img3.png');
   background-size: cover;
   background-repeat: no-repeat;
-  font-size: 14px;
+  background-position: center;
   font-family: sans-serif;
   color: white;
-  overflow: auto;
+  min-height: 100svh;
+  overflow-x: hidden;
 }
+
+/* LINKS */
 a {
   color: white;
-  font-size: 14px;
+  font-size: clamp(12px, 1.2vw, 14px);
 }
+
+/* MAIN CONTAINER */
 #main {
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
+
+/* SCALED WRAPPER */
 #wrap {
   position: relative;
-  margin: 0 auto;
-  width: 1100px;
-  height: 680px;
-  margin-top: 10px;
+  width: min(95vw, 1100px);
+  aspect-ratio: 1100 / 680;
+  margin-top: 1vh;
 }
+
+/* TEXT AREA */
 #text {
-  width: 272px;
-  height: 560px;
-  left: 188px;
-  top: 80px;
   position: absolute;
+  width: 24.7%;
+  height: 82%;
+  left: 17.1%;
+  top: 11.8%;
 }
+
+/* CODE */
 #code {
   display: none;
   color: rgb(196, 255, 255);
-  font-size: 16px;
-  margin-top: 70px;
-  line-height: 25px;
-  font-size: larger;
+  font-size: clamp(14px, 1.5vw, 18px);
+  margin-top: 4vh;
+  line-height: 1.6;
   font-weight: bolder;
 }
+
+/* CLOCK */
 #clock-box {
   position: absolute;
-  left: 60px;
-  top: 550px;
-  font-size: 28px;
+  left: 5.4%;
+  bottom: 4.5%;
+  font-size: clamp(16px, 2vw, 28px);
   display: none;
 }
+
 #clock-box a {
-  font-size: 28px;
+  font-size: inherit;
   text-decoration: none;
 }
+
 #clock {
-  margin-left: 48px;
+  margin-left: 1rem;
 }
+
 #clock .digit {
-  font-size: 64px;
+  font-size: clamp(32px, 4vw, 64px);
 }
+
+/* CANVAS */
 #canvas {
-  margin: 0 auto;
-  width: 1100px;
-  height: 680px;
+  width: 100%;
+  height: 100%;
 }
+
+/* ERROR */
 #error {
-  margin: 0 auto;
   text-align: center;
-  margin-top: 60px;
+  margin-top: 6vh;
   display: none;
 }
+
+/* MISC */
 .hand {
   cursor: pointer;
 }
+
 .say {
-  margin-left: 5px;
+  margin-left: 0.3rem;
 }
+
 .space {
-  margin-right: 150px;
+  margin-right: 10vw;
 }
 
-#message-box{
+/* MESSAGE */
+#message-box {
   position: absolute;
-  margin-top:450px;
-  font-size: 25px;
+  bottom: 6%;
+  left: 5%;
+  font-size: clamp(16px, 2vw, 25px);
   font-family: monospace;
-
 }
